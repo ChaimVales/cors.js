@@ -1,0 +1,125 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+#root{
+    /* display: flex; */
+    /* flex-direction: column; */
+    height: 100%;
+    width: 100%;
+}
+nav{
+    height: 5vh;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+
+}
+
+.link{
+    padding: 4px 15px;
+    background-color: azure;
+    border-radius: 20px;
+
+}
+
+.link:hover{
+    background-color: blanchedalmond;
+}
+
+main{
+    background-color: aquamarine;
+    /* height: 100vh; */
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    /* position: absolute; */
+    /* top: 5vh; */
+
+}
+
+section{
+    background-color: blanchedalmond;
+    height: 10%;
+    width: 95%;
+    margin: 2px 0px;
+    padding: 2px;
+    border-radius: 10px;
+    align-self: center;
+    text-align: center;
+    border: 1px solid black;
+}
+p{
+    color: blue;
+}
+img{
+    height: 70px;
+    width: 90px;
+    /* float: left; */
+    float: right;
+    /* top: 0px; */
+    margin-left: 15px;
+    margin-bottom: 1px;
+    border-radius: 10px;
+}
+
+.pageLeft{
+    background-color: rgba(158, 211, 51, 0.76);
+    /* height: 100vh; */
+    width: 20%;
+    position: fixed;
+    left: 0;
+    top: 5vh;
+    height: 100%;
+
+    
+}
+
+.pageRight{
+    background-color: rgba(158, 211, 51, 0.76);
+    /* height: 100vh; */
+    width: 20%;
+    position: fixed;
+    right: 0;
+    top: 5vh;
+    height: 100%;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* border: 1px solid black; */
+    /* height: 100vh; */
+    /* height: 100%; */
+}
+.leftTimeDisplay{
+    font-size: xx-small;
+    color: red;
+}
+.LeftTitle{
+    font-size: x-small;
+    color: black;
+}
+.LeftUrlToImage{
+    height: 20px;
+    width: 30px;
+    border-radius: 0px;
+
+    /* float: left; */
+    float: right;
+    /* top: 0px; */
+    /* margin-left: 15px; */
+    /* margin-bottom: 1px; */
+    /* border-radius: 10px; */
+}

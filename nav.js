@@ -1,4 +1,9 @@
-export function createNav() {
+import { loadRoute } from "./loadRoute.js";
+
+    
+
+
+  export function createNav() {
     const nav = document.createElement("nav");
 
     const home = document.createElement("a");
@@ -10,7 +15,7 @@ export function createNav() {
         localStorage.setItem("route", "home");
 
         loadRoute();
-        console.log("CCCCC");
+     
     })
 
     const about = document.createElement("a");

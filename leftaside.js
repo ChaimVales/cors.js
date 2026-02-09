@@ -1,21 +1,38 @@
+
+const API_KEY = "45bb34b600a34d9eaed2c272c056893b"
+
+const page = document.createElement("div");
+page.classList.add("page")
+
+const box = document.createElement("div");
+// box.classList.add("box1")
+box.id = ("box1")
+
+
+
+const aside = document.createElement("aside");
+aside.classList.add("pageLeft")
+
 export async function createLeftAside() {
-    // root.innerHTML = "";
-    const aside = document.createElement("aside");
-    aside.classList.add("pageLeft")
 
-    // root.innerHTML = "";
-    // const container = document.createElement("main");
-
+    let data = localStorage.getItem("news")
+    console.log(data)
+    if(data === null){
+        // console.log("nalllllllllllllll")
     const res = await fetch(`https://newsapi.org/v2/everything?q=Apple&apiKey=${API_KEY}`)
-    const data = await res.json();
-    // console.log(data);
+    data = await res.json();
+    console.log(data)
+    localStorage.getItem("news",data);
+    // console.log(data);}
+    }
+
     if (data.status === "ok") {
 
-        console.log("a")
+        console.log("bbbbb")
         data.articles.forEach(element => {
             const section = document.createElement("section");
+            section.classList.add("news-track")
 
-            // const title = document.createElement("h1")
             const timeDisplay = document.createElement("p");
             timeDisplay.classList.add("leftTimeDisplay")
             const title = document.createElement("p")
@@ -23,30 +40,40 @@ export async function createLeftAside() {
             const urlToImage = document.createElement("img")
             urlToImage.classList.add("LeftUrlToImage")
             const time = new Date()
-            console.log(time)
+        
             timeDisplay.textContent = time.toString();
-            // console.log(element.title)
-            // title.textContent = element.title;
+     
             title.textContent = element.title;
-            // urlToImage.textContent = element.urlToImage;
+          
             urlToImage.src = element.urlToImage
             section.appendChild(timeDisplay);
             section.appendChild(urlToImage);
             section.appendChild(title)
-            aside.appendChild(section);
-            page.appendChild(aside);
+            box.appendChild(section);
+            aside.appendChild(box);
+            
+  
         });
-
-        // createNav()
-        // createLeftAside()
-        // page.appendChild(container)
-        // createRightAside()
-        // root.appendChild(page)
-
-        // aside.textContent = "aside"
+        
+        page.appendChild(aside);
+    
 
         page.appendChild(aside)
         root.appendChild(page)
     }
 }
-//dds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

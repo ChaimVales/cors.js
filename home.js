@@ -29,7 +29,7 @@ export  async function createHome(currRote) {
             const title = document.createElement("h1")
             const author = document.createElement("p")
             const urlToImage = document.createElement("img")
-            // console.log(element.title)
+            console.log(element)
             title.textContent = element.title;
             author.textContent = element.author;
             // console.log(author.textContent)
@@ -39,6 +39,15 @@ export  async function createHome(currRote) {
             section.appendChild(author)
             section.appendChild(title);
             container.appendChild(section);
+
+               section.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    // localStorage.setItem("route", "home");
+            console.log(element.content)
+                    // loadRoute();
+                 
+                })
+
             // console.log(section)
         });
 

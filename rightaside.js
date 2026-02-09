@@ -63,7 +63,7 @@ function n(){
 
     if(f === 'home'){
     
-        const myTimeout = setInterval(createRightAside, 2000);
+        // const myTimeout = setInterval(createRightAside, 2000);
     }
     else{
         clearTimeout(myTimeout);

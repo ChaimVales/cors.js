@@ -55,12 +55,12 @@ footer{
 
 main{
     /* background-color: aquamarine; */
-    background-color: #ededed;
+    /* background-color: #ededed; */
     /* height: 100vh; */
     width: 60%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
     align-self: center;
     justify-self: center;
     
@@ -84,15 +84,16 @@ main{
 
 section{
     /* background-color: blanchedalmond; */
-    background-color: white;
+    /* background-color: white; */
     height: 10%;
-    width: 30%;
+    width: 90%;
     margin: 2px 0px;
     padding: 2px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     align-self: center;
     text-align: center;
-    /* border: 1px solid black; */
+    border-top: 1px solid black;
+    border-bottom-left-radius: 1px solid black;
 }
 p{
     color: blue;

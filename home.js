@@ -44,6 +44,8 @@ export  async function createHome(currRote) {
                     e.preventDefault();
                     // localStorage.setItem("route", "home");
             console.log(element.content)
+            console.log(e.content)
+            createContent()
                     // loadRoute();
                  
                 })
